@@ -25,27 +25,11 @@ const connect = function() {
 
     });
 
-  conn.on("connect", () => {
-
-    setTimeout(() => {
-
-    conn.write("Move: up")
-
-    }, 500)
-    });
-
-  conn.on("connect", () => {
-    setInterval(() => {
-
-    conn.write("Move: up")
-    
-    }, 500)
-  
-    });
-
 
   return conn;
 
 };
 
-module.exports = connect();
+module.exports = {
+  connect,
+};
